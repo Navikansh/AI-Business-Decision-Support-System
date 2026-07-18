@@ -1,6 +1,6 @@
 # Decision-Centric Inventory Allocation Platform
 
-> *Given a forecast, a budget, and current inventory — where should the next
+> *Given a forecast, a budget, and current inventory, where should the next
 > shipment go, and how confident should we be?*
 
 This is a decision-support tool, not a prediction pipeline. Every module
@@ -99,10 +99,8 @@ inventory-platform/
 
 ## 4. The centerpiece: confidence-weighted allocation (Module 5)
 
-The optimizer does not treat every forecast equally. A wide prediction
-interval (low confidence) pulls the demand estimate fed into the LP down
-toward the interval's lower bound; a tight interval (high confidence)
-allocates near the full point forecast.
+The optimizer does not treat every forecast equally. A wide prediction interval (low confidence) pulls the demand estimate fed into the LP down
+toward the interval's lower bound; a tight interval (high confidence) allocates near the full point forecast.
 
 **The exact formula**:
 
